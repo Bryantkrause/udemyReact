@@ -14,6 +14,7 @@ class App extends Component {
   }
 
   switchNameHandler = () => {
+    console.lot('testing password thing type thing')
     console.log('did clickify')
     // this.state.persons[0].name = "what what" <-------------- THIS IS BAAAAAAAAAAAAAAAAAAAAAAAAAAD
     this.setState({

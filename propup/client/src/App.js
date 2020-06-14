@@ -12,27 +12,36 @@ class App extends Component {
     ],
     otherState: 'some other value'
   }
-
-  switchNameHandler = () => {
+  switchNameHandler = (newName) => {
     console.log('did clickify')
     // this.state.persons[0].name = "what what" <-------------- THIS IS BAAAAAAAAAAAAAAAAAAAAAAAAAAD
     this.setState({
       persons: [
-        {name: 'Maximilian', age: 28},
+        {name: newName, age: 28},
         {name: 'Max2', age: 282},
         {name: 'Max3', age: 283},
         {name: 'Max4', age: 500},
       ] 
     })
   }
-
+nameChangedHandler = (event) => {
+    this.setState ({
+    persons: [
+      {name: 'Max', age: 28},
+      {name: event.target.value, age: 282},
+      {name: 'Max3', age: 283},
+      {name: 'Max4', age: 284},
+    ]
+  })}
   render() {
   return (
     <div className="App">
-      <button onClick={this.switchNameHandler}> Switch Name </button>
+      <button onClick={() => this.switchNameHandler('testytesttester')}> Switch Name </button>
       <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
       <Person name={this.state.persons[1].name} age={this.state.persons[1].age}/>
-      <Person name={this.state.persons[2].name} age={this.state.persons[2].age}> this is extra </Person>
+      <Person name={this.state.persons[2].name} age={this.state.persons[2].age}
+      click={this.switchNameHandler.bind(this, 'dude wheres my car')}
+      changed={this.nameChangedHandler}> this is extra </Person>
       <Person name={this.state.persons[3].name} age={this.state.persons[3].age}/>
     </div>
   );

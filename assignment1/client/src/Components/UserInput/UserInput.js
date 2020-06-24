@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserInput.css'
 
-const UserInput = (props) => {
+const userInput = (props) => {
     return (
         <div className='Input'>
             <p>Enter Username</p>
@@ -12,4 +12,4 @@ const UserInput = (props) => {
 }
 
 
-export default UserInput
+export default userInput

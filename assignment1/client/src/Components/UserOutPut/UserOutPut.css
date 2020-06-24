@@ -1,0 +1,8 @@
+.OutPut{
+    width: 65%;
+    margin: 24px auto;
+    border: 2px solid rgb(29, 197, 99);
+    box-shadow: 0 3px 4px #ccc;
+    padding: 24px;
+    text-align: center;
+ }

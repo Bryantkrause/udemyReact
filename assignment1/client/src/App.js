@@ -1,13 +1,27 @@
-import React from 'react';
-import './Components/UserInput/UserInput.js'
-import UserInput from './Components/UserInput/UserInput.js';
+import React, {
+  Component
+} from 'react';
+import UserInput from './Components/UserInput/'
+import UserOutPut from './Components/UserOutPut/';
 
-function App() {
-  return (
-    <div>
+class App extends Component {
+  state = {
+    username: {
+      name: 'Awaiting Username',
+      name: 'User2'
+    },
+    otherState: 'some other value'
+  }
+
+  render() {
+    return ( 
+      <div>
       <UserInput/>
-    </div>
-  );
+      <UserOutPut/>
+      </div>
+
+    )
+  };
 }
 
 export default App;

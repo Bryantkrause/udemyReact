@@ -6,18 +6,28 @@ import UserOutPut from './Components/UserOutPut/';
 
 class App extends Component {
   state = {
-    username: {
-      name: 'Awaiting Username',
-      name: 'User2'
-    },
+    username: [
+      {name: 'Awaiting Username'}
+  ],
     otherState: 'some other value'
+  }
+
+  nameUpdater =(event) => {
+    this.setState({
+      username: [
+        {name: event.target.value}
+    ]
+    })
   }
 
   render() {
     return ( 
       <div>
+            
       <UserInput/>
-      <UserOutPut/>
+      <button onClick={() => this.nameUpdater()}> Switch Name </button>
+      <UserOutPut name={this.state.username[0].name}
+      />
       </div>
 
     )

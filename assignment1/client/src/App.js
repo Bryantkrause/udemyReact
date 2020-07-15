@@ -24,9 +24,12 @@ class App extends Component {
     return ( 
       <div>
             
-      <UserInput/>
+      <UserInput changed={this.nameUpdater}
+      currentName={this.state.name}/>
       <button onClick={() => this.nameUpdater()}> Switch Name </button>
       <UserOutPut name={this.state.username[0].name}
+      />
+      <UserOutPut name="dude"
       />
       </div>
 

@@ -5,7 +5,10 @@ const userInput = (props) => {
     return (
         <div className='Input'>
             <p>Enter Username</p>
-<input type="text" onChange={props.changed} value={props.name}></input>
+<input 
+type="text"
+ onChange={props.changed}
+  value={props.name}/>
 
        </div>
     )

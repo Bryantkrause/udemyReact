@@ -26,7 +26,6 @@ class App extends Component {
             
       <UserInput changed={this.nameUpdater}
       currentName={this.state.name}/>
-      <button onClick={() => this.nameUpdater()}> Switch Name </button>
       <UserOutPut name={this.state.username[0].name}
       />
       <UserOutPut name="dude"

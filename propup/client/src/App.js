@@ -85,6 +85,8 @@ return (
       style={style}
       onClick={this.togglePersonsHandler}>Toggle Persons</button>
     {persons}
+    <hr />
+    
   </div>
 );
 // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));

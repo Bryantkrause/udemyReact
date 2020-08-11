@@ -6,12 +6,14 @@ import styled from 'styled-components'
 
 const StyledDiv = styled.div`
 width: 60%;
-margin: 16x auto;
-box-shadow: 0 3px 4 px #ccc;
-text-align: center
+margin: 16px auto;
+border: 1px solid #eee;
+box-shadow: 0 2px 3px #ccc;
+padding: 16px;
+text-align: center;
 
-@media (min-width: 500px){
-        width: 450px
+@media (min-width: 500px) {
+  width: 450px;
 }
 
 `

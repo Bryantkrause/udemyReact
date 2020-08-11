@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import styled from 'styled-components'
 import './App.css';
-import Person from './Person/Person'
+import Persons from '../components/Persons/Persons'
 
 // import Radium, {StyleRoot} from 'radium'
 
@@ -86,14 +86,10 @@ let persons = null;
 if (this.state.showPersons) {
   persons = (       
   <div>
-    {this.state.persons.map((person, index) => {
-      return <Person  click={() => this.deletePersonHandler(index)}      
-      name={person.name}
-      key={person.id}
-      age={person.age}
-      changed={(event)=> this.nameChangedHandler(event, person.id)}/>
-      
-    })}
+    <Persons 
+    persons={this.state.persons}
+    clicked={this.deletePersonHandler}
+    changed={this.nameChangedHandler} />
     </div>
     )
     style.backgroundColor = 'red'
@@ -114,12 +110,7 @@ if (this.state.persons.length <= 1){
 return (
   // <StyleRoot>
   <div className="App">
-    <h1>Hi, I'm a React App</h1>
-    <p className={classes.join(' ')}>This is really working!</p>
-    <StyledButton alt={this.state.showPersons}
-      onClick={this.togglePersonsHandler}>
-        Toggle Persons
-        </StyledButton>
+    
     {persons}
     <hr />
     
@@ -133,3 +124,12 @@ return (
 export default App;
 
 // export default Radium(App);
+
+// {this.state.persons.map((person, index) => {
+//   return <Person  click={() => this.deletePersonHandler(index)}      
+//   name={person.name}
+//   key={person.id}
+//   age={person.age}
+//   changed={(event)=> this.nameChangedHandler(event, person.id)}/>
+  
+// })}

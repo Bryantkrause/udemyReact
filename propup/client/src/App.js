@@ -87,12 +87,12 @@ if (this.state.showPersons) {
   persons = (       
   <div>
     {this.state.persons.map((person, index) => {
-      return <Person 
-      click={() => this.deletePersonHandler(index)}      
+      return <Person  click={() => this.deletePersonHandler(index)}      
       name={person.name}
-      age={person.age}
       key={person.id}
-      changed={(event)=> this.nameChangedHandler(event, person.id)} />
+      age={person.age}
+      changed={(event)=> this.nameChangedHandler(event, person.id)}/>
+      
     })}
     </div>
     )
